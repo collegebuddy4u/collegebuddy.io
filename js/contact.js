@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) { // wait until the document is ready
 	$('#send').on('click', function(){ // when the button is clicked the code executes
 		$('.error').fadeOut('slow'); // reset the error messages (hides them)
 
-		var error = false; // we will set this true if the form isn't valid
+		var error = true; // we will set this true if the form isn't valid
 
 		var name = $('input#name').val(); // get the value of the input field
 		if(name == "" || name == " ") {
@@ -48,6 +48,6 @@ jQuery(document).ready(function ($) { // wait until the document is ready
 			}
 		});
 
-		return false; // stops user browser being directed to the php file
+		return true; // stops user browser being directed to the php file
 	}); // end click function
 });
