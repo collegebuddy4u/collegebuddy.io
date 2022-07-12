@@ -32,7 +32,7 @@ jQuery(document).ready(function ($) { // wait until the document is ready
 			type: "POST",
 			url: $('#ajax-form').attr('action'),
 			data: data_string,
-			timeout: 6000,
+			timeout: 6000000,
 			error: function(request,error) {
 				if (error == "timeout") {
 					$('#err-timedout').slideDown('slow');
